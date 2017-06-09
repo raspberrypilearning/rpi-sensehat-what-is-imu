@@ -1,1 +1,2 @@
-# rpi-sensehat-what-is-imu
+# rpi-sensehat-what-is-imu 
+Some readme content
