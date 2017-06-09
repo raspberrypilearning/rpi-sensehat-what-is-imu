@@ -1,122 +1,37 @@
-# New project
-
-Each project contains a set of directories for each language, you're set up now with an `en` directory that contains the necessary files to get you going.
-
-* [meta.yml](#metayml)
-* [Steps - step_1.md, step_2.md, etc](#steps)
-
-
-## meta.yml
-
-The `meta.yml` file sets lots of basic information for the project.
-
-``` yml
-title: The title of the project
-hero_image: images/banner.png # The image used on the listing view
-description: Project description # Used on the listing view
-published: false # A boolean - `true` or`false` - that controls whether the project will appear on the listing view
-ingredient: false # A boolean - `true` or`false` - that controls whether the project will appear on the listing view if published
-steps: # A list of all the steps
-  - title: How to get started # Used as the sidebar title for the step
-    duration: 60 # Not used yet
-```
-
-## Steps
-
-* [Links](#links)
-* [Resources](#resources)
-* [Images](#images)
-* [Challenges](#challenges)
-* [Definitions](#definitions)
-* [Hints](#hints)
-* [Collapsed ingredients](#collapsed-ingredients)
-
-Project steps are written in the [Kramdown](https://kramdown.gettalong.org/) variety of markdown. There is a [quick reference guide](https://kramdown.gettalong.org/quickref.html) and [full syntax documentation](https://kramdown.gettalong.org/syntax.html). A [custom kramdown extension](https://github.com/RaspberryPiFoundation/kramdown_rpf) is used for hints, challenges & collapsed ingredients.
-
-### Links, resources & images
-
-See [kramdown documentation](https://kramdown.gettalong.org/quickref.html#links-and-images) for more details.
-
-#### Links
-
-A [link](http://kramdown.gettalong.org) to the kramdown homepage.
-
-You can add  a link that opens in a new browser window/tab [like this](https://google.com/){:target="_blank"}
-
-#### Resources
-
-A [link to a file in the resources directory](resources/worksheet.pdf){:download='filename.pdf'}. The download part will make the file automatically download rather than be rendered in the browser, the filename you'd like the file to be saved with is the second bit after the `=`. The `/slash learning` application will ensure the resource is available.
-
-#### Images
-
-![Banner image](images/banner.png) - the link text becomes the alternative text for the image. The `/slash learning` application will ensure the image is available.
-
-#### Challenges
-
-``` markdown
---- challenge ---
-
-## Challenge: Improving your drum
-
-* Any markdown in here
-* will be parsed as normal
-
---- /challenge ---
-```
-
-
-### Definitions
-
-Definitions can be written using HTML abbreviations, which are a standard part of [kramdown](https://kramdown.gettalong.org/quickref.html#abbreviations)
-
-```
-To do this you might require a variable or a two word definition.
-
-*[variable]: An object that has a name and stores a value.
-
-*[two word]: Definitions are markdown, and can have [links](http://kramdown.gettalong.org) etc
-```
-
-
-### Hints
-
-A header for the hint, and all the html markup for hints will be automatically added.
-
-```
---- hints ---
---- hint ---
-
-Here's a hint of how to do this project.
-
-Any markdown you like within a hint:
-* item 1
-* item 2
-
---- /hint ---
---- hint ---
-Hint 2
-
---- /hint ---
---- hint ---
-
-Hint 3
---- /hint ---
---- hint ---
-Hint 4
---- /hint ---
-
---- /hints ---
-```
-
-### Collapsed ingredients
-
-Set the title and the image from within the `collapse` area. The image must exist in **this** project, not the ingredient.
-
---- collapse ---
+--- step ---
 ---
-title: Downloading and installing the Raspberry Pi software
+title: What is an IMU?
 ---
 
-[[[generic-scratch-new-project]]]
+The Sense HAT has a movement sensor called an IMU, which can measure the kind of movement it is experiencing. IMU stands for Inertial Measurement Unit. It's actually three sensors in one:
 
---- /collapse ---
+- A gyroscope (measures momentum and rotation)
+- An accelerometer (measures acceleration forces and can be used to find the direction of gravity)
+- A magnetometer (measures the Earth's own magnetic field, so it's a bit like a compass)
+
+![](images/apollo_imu.jpg)
+
+Why is a movement sensor important, though? When you're up in space there is one question of absolute importance to which you must always know the answer: **which way am I pointing?**
+
+If you don't know your orientation you are in big trouble, so an IMU sensor like this one is used on all manned and unmanned spacecraft to track movements and maintain an understanding of orientation. Even the earliest spacecraft had them. Ask your grandparents if they remember the [Apollo missions](http://en.wikipedia.org/wiki/Apollo_program) that landed humans on the surface of the moon.
+
+Above is a picture of the IMU sensor from the Apollo command module. You'll notice how big it is compared to the tiny black cube on the Astro Pi; that's the difference between 1975 and 2015 technology. Incidentally, the Astro Pi IMU is probably not as accurate as the Apollo one, however it is a million times cheaper!
+
+### How is orientation represented?
+
+We all know the Earth rotates around an axis that runs between the North and South Poles. All objects in space or otherwise have *three* axes around which they can rotate. If you know how much rotation has happened on each axis, then you know which way the object is pointing.
+
+The three axes are:
+
+- **Pitch** (like a plane taking off)
+- **Roll** (the plane doing a victory roll)
+- **Yaw** (imagine steering the plane like a car)
+
+Watch this short [video](https://www.youtube.com/watch?v=pQ24NtnaLl8) that shows where these axes are in relation to a plane. Try to imagine the plane pointing in any random direction. To get the plane into that position, you can rotate it by a known amount around each axis to get it to the orientation that you imagined.
+
+![](images/orientation.png)
+
+The image above shows where these axes are in relation to the Sense HAT.
+
+
+--- /step ---
