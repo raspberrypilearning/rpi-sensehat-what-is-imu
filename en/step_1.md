@@ -1,8 +1,3 @@
---- step ---
----
-title: What is an IMU?
----
-
 The Sense HAT has a movement sensor called an IMU, which can measure the kind of movement it is experiencing. IMU stands for Inertial Measurement Unit. It's actually three sensors in one:
 
 - A gyroscope (measures momentum and rotation)
@@ -33,5 +28,3 @@ Watch this short [video](https://www.youtube.com/watch?v=pQ24NtnaLl8) that shows
 
 The image above shows where these axes are in relation to the Sense HAT.
 
-
---- /step ---
