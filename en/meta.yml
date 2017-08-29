@@ -1,10 +1,13 @@
-title: rpi-sensehat-what-is-imu
+title: What is an IMU?
 hero_image: images/banner.png
 description: Find out about the Sense HAT IMU and how to measure pitch, roll and yaw
-original_url: https://codeclubprojects.org/en-GB/scratch/rock-band
+original_url:
 theme: cc-prototype
 duration: 1 # 1, 2 or 3
 ingredient: true
 listed: false
+copyedit: false
+interests:
+technologies: 
 steps:
-  - title: Step one
+  - title: What is an IMU?
