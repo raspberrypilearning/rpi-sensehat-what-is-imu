@@ -1,6 +1,6 @@
 title: What is an IMU?
 hero_image: images/banner.png
-description: Find out about the Sense HAT IMU and how to measure pitch, roll and yaw
+description: Find out about the Sense HAT's IMU for sensing orientation
 original_url:
 theme: cc-prototype
 duration: 1 # 1, 2 or 3
